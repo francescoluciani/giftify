@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useState } from "react";
+import Dashboard from "./components/Dashboard";
+import Displayer from "./components/Displayer";
 
 function App() {
+  const [app, setApp] = useState(1);
+
+  function setGiftManager() {
+    setApp(1);
+  }
+  function setWishlist() {
+    setApp(2);
+  }
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="title">
+        <img src="https://i.ibb.co/Nxcg8gP/Untitled-design-29.png" />
+      </div>
+      <Dashboard setGiftManager={setGiftManager} setWishlist={setWishlist} />
+      <Displayer app={app} />
     </div>
   );
 }
