@@ -1,0 +1,47 @@
+.friend-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.gift-manager-title {
+  font-size: 25px;
+}
+
+.gift-manager-subtitle {
+  font-size: 15px;
+  margin: 0 0 20px 0;
+}
+.friend-card {
+  display: flex;
+  width: 180px;
+  height: 180px;
+  margin: 80px;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: #ffd956;
+  border-radius: 20px;
+  color: #f34f5d;
+}
+
+.friend-card:hover {
+  cursor: pointer;
+  background-color: #f34f5d;
+  color: white;
+}
+
+.friend-name {
+  font-size: 20px;
+
+  font-weight: bold;
+  margin: 0px;
+}
+
+.friend-number {
+  font-size: 20px;
+
+  font-weight: bold;
+  margin: 10px;
+}

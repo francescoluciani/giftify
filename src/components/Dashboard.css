@@ -36,6 +36,9 @@
 }
 
 .dashboard-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 35%;
   border-radius: 10px;
   border: none;
@@ -43,4 +46,6 @@
   color: white;
   font-weight: bold;
   padding: 10px;
+  text-decoration: none;
+  text-align: center;
 }

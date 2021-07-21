@@ -1,4 +1,5 @@
 import "./Dashboard.css";
+import { Link } from "react-router-dom";
 
 function Dashboard({ setGiftManager, setWishlist }) {
   return (
@@ -6,17 +7,21 @@ function Dashboard({ setGiftManager, setWishlist }) {
       <div className="userboard">
         <img
           className="userboard-picture"
-          src="https://i.ibb.co/XLRcvNS/mobile.png"
+          src="https://i.ibb.co/m852GFz/Portrait-picture-Francesco-Luciani-copia.jpg"
           alt="userboard-picture"
         />
       </div>
       <div className="userboard-section">
-        <button className="dashboard-button" onClick={setGiftManager}>
+        <Link
+          to="/gift-manager"
+          className="dashboard-button"
+          onClick={setGiftManager}
+        >
           GIFT MANAGER
-        </button>
-        <button className="dashboard-button" onClick={setWishlist}>
+        </Link>
+        <Link to="/wishlist" className="dashboard-button" onClick={setWishlist}>
           WISHLIST
-        </button>
+        </Link>
       </div>
     </div>
   );
