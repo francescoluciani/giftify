@@ -1,6 +1,6 @@
 import Friend from "./Friend.js";
 
-function FriendsList() {
+function FriendsList({ handleSetFriend }) {
   const friends = [
     {
       name: "Chiara",
@@ -19,9 +19,11 @@ function FriendsList() {
     <div>
       {friends.map((friend) => (
         <Friend
+          key={friend.name}
           name={friend.name}
           number={friend.number}
           picture={friend.picture}
+          handleSetFriend={handleSetFriend}
         />
       ))}
     </div>
