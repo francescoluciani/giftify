@@ -1,6 +1,7 @@
 import "./AddFriend.css";
 import { Link } from "react-router-dom";
-function AddFriend(handleChange, handleClick) {
+
+function AddGift({ friend }) {
   return (
     <div className="dashboard">
       <div className="userboard">
@@ -12,31 +13,30 @@ function AddFriend(handleChange, handleClick) {
       </div>
       <div className="add-friend-section">
         <div className="contact-us">
-          <h1 className="claim">Add a friend</h1>
+          <h1 className="claim">Add a gift</h1>
         </div>
         <form>
           <input
             type="text"
-            id="fname"
-            name="firstname"
-            placeholder="Name"
-            onChange={handleChange}
+            id="name"
+            name="name"
+            placeholder="Name of the  gift"
           ></input>
           <input
             type="text"
-            id="email"
-            name="email"
-            placeholder="Picture URL"
-            onChange={handleChange}
+            id="price"
+            name="price"
+            placeholder="Price spent"
+          ></input>
+          <input
+            type="text"
+            id="date"
+            name="date"
+            placeholder="When did you buy it?"
           ></input>
 
-          <Link to="/gift-manager">
-            <input
-              className="submit"
-              type="submit"
-              value="Submit"
-              onClick={handleClick}
-            ></input>
+          <Link to={`/gift-manager/${friend}`}>
+            <input className="submit" type="submit" value="Submit"></input>
           </Link>
         </form>
       </div>
@@ -44,4 +44,4 @@ function AddFriend(handleChange, handleClick) {
   );
 }
 
-export default AddFriend;
+export default AddGift;

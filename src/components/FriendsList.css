@@ -4,6 +4,17 @@
   align-items: center;
   flex-direction: column;
 }
+.gift-displayer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 90%;
+  background-color: mintcream;
+  border-radius: 20px;
+  margin: auto;
+  box-shadow: 8px 8px 9px -3px rgba(0, 0, 0, 0.82);
+  margin-bottom: 70px;
+}
 
 .gift-manager-title {
   font-size: 25px;
@@ -31,10 +42,13 @@
   background-color: #f34f5d;
   color: white;
 }
+a {
+  text-decoration: none;
+}
 
 .friend-name {
   font-size: 20px;
-
+  text-decoration: none;
   font-weight: bold;
   margin: 0px;
 }
